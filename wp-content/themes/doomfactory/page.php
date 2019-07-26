@@ -18,32 +18,31 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
-
-			// find todays date
-			$date = date('Ymd');
-
+			// HOMEPAGE
 			if( is_front_page() || is_home() ) :
 
-				// Include page content as intro?
-				the_content();
+				// Slideshow and other page content
+				echo do_shortcode(get_post_field('post_content'));
 
-				// args
-				$args = array(
-					'numberposts'	=> -1,
-					'posts_per_page' => -1,
-					'post_type'		=> 'product',
-					'orderby'   => 'date',
-					'order' => 'DESC'
-				);
-
-				// query
-				$the_query = new WP_Query( $args );
+				// Feature Products
+				$featured_products = get_field('featured_products');
 				
-				if( $the_query->have_posts() ):
+				if( !empty($featured_products) ):
+			?>
+				<div class="products">
+			<?php
+					foreach( $featured_products as $product ) :
+						global $post; 
+						$post = get_post( $product->ID );
+						setup_postdata( $post );
 
-					while ( $the_query->have_posts() ) : $the_query->the_post();
 						get_template_part( 'template-parts/content/content', 'grid' );
-					endwhile;
+
+						wp_reset_postdata();
+					endforeach;
+			?>
+				</div><!-- .products -->
+			<?php
 				else :
 					get_template_part( 'template-parts/content/content', 'none' );
 				endif;

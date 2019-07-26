@@ -794,12 +794,12 @@ textarea {
 --------------------------------------------------------------*/
 a {
   text-decoration: none;
-  color: #7772CA;
+  color: #D80000;
   -webkit-transition: color .25s ease-in-out;
   -moz-transition: color .25s ease-in-out;
   transition: color .25s ease-in-out; }
   a:visited {
-    color: #7772CA; }
+    color: #D80000; }
   a:hover, a:focus, a:active {
     color: #111; }
   a:focus {
@@ -956,6 +956,44 @@ nav {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+.home .products .product {
+  width: 100%;
+  margin-top: 10px; }
+  .home .products .product h1 {
+    display: none; }
+
+@media (min-width: 501px) {
+  .home .products {
+    width: 100%;
+    overflow: hidden; }
+    .home .products .product {
+      width: 46.5%;
+      float: left; }
+      .home .products .product:nth-child(2n) {
+        padding-left: 5%; } }
+
+@media (min-width: 772px) {
+  .home #main {
+    display: flex; }
+  .home .metaslider {
+    flex: 68%;
+    position: relative; }
+  .home .products {
+    flex: 32%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    float: none; }
+    .home .products .product {
+      width: auto;
+      flex: 1;
+      float: none; }
+      .home .products .product:nth-child(2n) {
+        padding-left: 0; }
+      .home .products .product h1 {
+        display: none; } }
 
 /*--------------------------------------------------------------
 ## Comments

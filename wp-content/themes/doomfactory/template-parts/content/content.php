@@ -22,7 +22,7 @@
 
 		<div id="product"></div><!-- #product -->
 		<script type="text/javascript">
-			productID = 2147093086305;
+			productID = <?php echo get_field('product_id', $ID); ?>;
 		</script>
 		<?php
 			// echo $buyButton;
@@ -33,8 +33,7 @@
 	<section class="product-images">
 		<?php
 			if( !empty($images) ) :
-				foreach( $images as $imageArray ) :
-					$image = $imageArray['image'];
+				foreach( $images as $image ) :
 					$size = 'large';
 					$source = $image['sizes']['large'];
 					$width = $image['sizes'][$size . '-width'];

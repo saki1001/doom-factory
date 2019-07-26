@@ -1,0 +1,66 @@
+.home {
+	.products {
+		.product {
+			width: 100%;
+			margin-top: 10px;
+
+			h1 {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width: $tablet__min-width) {
+	.home {
+		.products {
+			width: 100%;
+			overflow: hidden;
+
+			.product {
+				width: 46.5%;
+				float: left;
+
+				&:nth-child(2n) {
+					padding-left: 5%;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop__min-width) {
+	.home {
+		#main {
+			display: flex;
+		}
+
+		.metaslider {
+			flex: 68%;
+			position: relative;
+		}
+
+		.products {
+			flex: 32%;
+			width: auto;
+			display: flex;
+			flex-direction: column;
+			padding-left: 5%;
+			float: none;
+
+			.product {
+				width: auto;
+				flex: 1;
+				float: none;
+
+				&:nth-child(2n) {
+					padding-left: 0;
+				}
+
+				h1 {
+					display: none;
+				}
+			}
+		}
+	}
+}

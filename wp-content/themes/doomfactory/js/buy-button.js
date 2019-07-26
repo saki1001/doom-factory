@@ -19,8 +19,11 @@
   }
 
   var buttonStyles = {
+    'font-family': 'Quantico',
+    'font-weight': 'bold',
+    'border-radius': 0,
     'background-color': '#d30000',
-    'border-radius': '60px',
+    'border-radius': '3px',
     ':hover': {
       'background-color': '#ff0000',
       'color': '#000000'
@@ -89,7 +92,9 @@
                 'overflow': 'hidden',
                 'margin': '0 auto'
               }),
-              options: Object.assign({}, marginStyles),
+              options: Object.assign({}, marginStyles, {
+                'margin-top': '20px',
+              }),
               buttonWrapper: Object.assign({}, marginStyles),
               button: Object.assign({}, marginStyles, buttonStyles, {
                 'position': 'relative',
@@ -113,17 +118,19 @@
             styles: {
               toggle: {
                 'background-color': 'black',
-                'border-radius': 0
-              }
+                ':hover': {
+                  'background-color': '#d30000',
+                },
+              },
             }
           },
           cart: {
-            googleFonts: ['quantico'],
+            googleFonts: ['Quantico'],
             styles: {
               title: {
-                'font-family': 'quantico'
+                'font-family': 'Quantico',
               },
-              button: buttonStyles
+              button: buttonStyles,
             }
           }
         }
