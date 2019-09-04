@@ -17,14 +17,14 @@ nav {
             }
 
             a:hover {
-                color: $periwinkle;
+                color: $red;
             }
 
             &.current-menu-item {
                 a,
                 a:visited,
                 a:active {
-                    color: $periwinkle;
+                    color: $red;
                 }
 
                 a:hover {
