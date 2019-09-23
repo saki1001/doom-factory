@@ -602,6 +602,13 @@ article.featured {
 #page.contact #main h3 {
   margin-bottom: 0.5em; }
 
+.page h1 {
+  font-size: 1.5em;
+  margin-top: 0; }
+
+.page .content figure {
+  margin-top: 0; }
+
 .page .entry-content h2 {
   font-size: 2rem;
   margin-bottom: 1em; }
@@ -976,8 +983,8 @@ nav {
 @media (min-width: 772px) {
   .home #main {
     display: flex; }
-  .home .metaslider {
-    flex: 68%;
+  .home .slideshow-container {
+    flex: 75%;
     position: relative; }
   .home .products {
     flex: 32%;
@@ -1080,5 +1087,36 @@ object {
 
 .gallery-caption {
   display: block; }
+
+.slideshow-container {
+  position: relative;
+  -webkit-animation: fadein 3s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 3s;
+  /* Internet Explorer */
+  -o-animation: fadein 3s;
+  /* Opera < 12.1 */
+  animation: fadein 3s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.slideshow-container .ml-slider {
+  width: 80% !important;
+  margin: 40px auto 0; }
+
+.slideshow-container .frame {
+  background: url("../images/DF-frame-white-bg.png") no-repeat 0 0;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 /*# sourceMappingURL=style.css.map */

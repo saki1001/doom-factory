@@ -204,6 +204,15 @@ article {
 // General Page Stylss
 // **********************
 .page {
+    h1 {
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+
+    .content figure {
+        margin-top: 0;
+    }
+
     .entry-content {
         h2 {
             font-size: 2rem;
