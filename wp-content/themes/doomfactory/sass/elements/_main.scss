@@ -201,22 +201,37 @@ article {
     }
 }
 
-// General Page Stylss
+// General Page Styles
 // **********************
 .page {
     h1 {
         font-size: 1.5em;
         margin-top: 0;
-    }
 
-    .content figure {
-        margin-top: 0;
+        @media screen and (max-width:$mobile__max-width) {
+            margin-bottom: 0;
+        }
     }
 
     .entry-content {
         h2 {
             font-size: 2rem;
             margin-bottom: 1em;
+        }
+    }
+}
+
+// About Page Styles
+// **********************
+.page-id-72 {
+    .content figure {
+        margin-top: 0;
+    }
+
+    @media screen and (max-width:$tablet__max-width) {
+        .content figure {
+            width: 100%;
+            margin-left: 0;
         }
     }
 }

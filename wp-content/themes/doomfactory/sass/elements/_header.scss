@@ -42,6 +42,8 @@
     }
 
     @media screen and (max-width:$mobile__max-width) {
+        margin-bottom: 1em;
+
         #branding {
             float: none;
         }

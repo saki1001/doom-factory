@@ -119,7 +119,7 @@ footer {
     }
 
     @media screen and (max-width:$mobile__max-width) {
-        height: 220px;
+        height: 85px;
 
         #email-signup,
         #mc_embed_signup .mc-field-group,
@@ -138,11 +138,11 @@ footer {
         }
 
         .push {
-            height: 220px; /* .push must be the same height as footer */
+            height: 85px; /* .push must be the same height as footer */
         }
 
         #page {
-            margin: 0 auto -220px; /* the bottom margin is the negative value of the footer's height */;
+            margin: 0 auto -85px; /* the bottom margin is the negative value of the footer's height */;
         }
 
     }

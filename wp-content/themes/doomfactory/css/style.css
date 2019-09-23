@@ -487,13 +487,15 @@ footer {
     #header #branding .site-description {
       margin-bottom: 0; }
   @media screen and (max-width: 500px) {
-    #header #branding {
-      float: none; }
-    #header #branding {
-      max-width: 100%;
-      margin-bottom: 10px; }
-      #header #branding .site-title {
-        margin: 0 0 0 18px; } }
+    #header {
+      margin-bottom: 1em; }
+      #header #branding {
+        float: none; }
+      #header #branding {
+        max-width: 100%;
+        margin-bottom: 10px; }
+        #header #branding .site-title {
+          margin: 0 0 0 18px; } }
 
 #main {
   margin-bottom: 150px; }
@@ -617,13 +619,21 @@ article.featured {
 .page h1 {
   font-size: 1.5em;
   margin-top: 0; }
-
-.page .content figure {
-  margin-top: 0; }
+  @media screen and (max-width: 500px) {
+    .page h1 {
+      margin-bottom: 0; } }
 
 .page .entry-content h2 {
   font-size: 2rem;
   margin-bottom: 1em; }
+
+.page-id-72 .content figure {
+  margin-top: 0; }
+
+@media screen and (max-width: 771px) {
+  .page-id-72 .content figure {
+    width: 100%;
+    margin-left: 0; } }
 
 footer #email-signup {
   width: 50%;
@@ -716,7 +726,7 @@ footer #copy {
 
 @media screen and (max-width: 500px) {
   footer {
-    height: 220px; }
+    height: 85px; }
     footer #email-signup,
     footer #mc_embed_signup .mc-field-group,
     footer #mc_embed_signup .clear {
@@ -728,10 +738,10 @@ footer #copy {
     footer #mc_embed_signup #mce-responses {
       width: 96%; }
     footer .push {
-      height: 220px;
+      height: 85px;
       /* .push must be the same height as footer */ }
     footer #page {
-      margin: 0 auto -220px;
+      margin: 0 auto -85px;
       /* the bottom margin is the negative value of the footer's height */ } }
 
 /*--------------------------------------------------------------
