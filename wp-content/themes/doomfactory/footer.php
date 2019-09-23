@@ -16,7 +16,7 @@
 
 <footer>
 	<div class="footer-wrap">
-		<p id="copy">DOOM FACTORY &copy; <?php echo date("Y"); ?></p>
+		<p id="copy" class="logo-font">DOOM FACTORY&copy; <?php echo date("Y"); ?></p>
 	</div>
 </footer><!-- footer -->
 
